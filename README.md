@@ -15,20 +15,21 @@
 
 ## Como rodar a aplicação :dizzy:
 
-No terminal, clone o projeto:
+```bash
+# Clone este repositório
+$ git clone <https://github.com/FelipeRomao/builder-challenge>
 
-git clone https://github.com/FelipeRomao/builder-challenge
+# Acesse a pasta do projeto no terminal/cmd
+$ cd builder-challenge
 
-Entre na pasta do projeto:
-cd builder-challenge
+# Instale as dependências
+$ npm install
 
-Instale as dependências:
-yarn install ou npm install
+# Execute a aplicação em modo de desenvolvimento
+$ npm start
 
-Execute a aplicação:
-yarn start ou npm start
-
-Pronto, agora é só acessar a aplicação a partir da rota http://localhost:3000/
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
 
 ## Linguagens e libs utilizadas :books:
 
@@ -39,7 +40,9 @@ Pronto, agora é só acessar a aplicação a partir da rota http://localhost:300
 
 ## Como rodar os testes?
 
-No terminal, execute o comando:
-yarn test ou npm test
+```bash
+# No terminal, execute o comando:
+$ npm test
+```
 
 <img src="https://img.shields.io/static/v1?label=react&message=framework&color=blue&style=for-the-badge&logo=REACT"/>
