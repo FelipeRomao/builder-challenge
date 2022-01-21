@@ -10,7 +10,9 @@ const GlobalStyle = createGlobalStyle`
 
 html,
 body {
-  background-color:#fafafa;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+
   box-sizing: border-box;
   width: 100%;
   height: 100%;
