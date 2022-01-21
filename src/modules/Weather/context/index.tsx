@@ -6,6 +6,8 @@ import fetchWeatherData from "shared/services/weather";
 interface WeatherContextData {
   results: any;
   loader: boolean;
+  onError: any;
+  onGetWeatherSuccess: any;
 }
 
 interface WeatherProviderProps {
@@ -49,6 +51,8 @@ export function WeatherProvider({ children }: WeatherProviderProps) {
       value={{
         loader,
         results,
+        onError,
+        onGetWeatherSuccess,
       }}
     >
       {children}

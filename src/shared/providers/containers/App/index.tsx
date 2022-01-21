@@ -5,7 +5,7 @@ import { ToastContainer } from "react-toastify";
 import GlobalStyle from "shared/styles/GlobalStyle";
 import Widget from "shared/components/molecules/Widget";
 
-import { Container, Action } from "./styles";
+import { Container } from "./styles";
 import { WeatherProvider } from "modules/Weather/context";
 
 function App() {
@@ -15,10 +15,6 @@ function App() {
       <ToastContainer />
       <WeatherProvider>
         <Widget />
-
-        <Action onClick={() => window.location.reload()}>
-          Atualizar dados
-        </Action>
       </WeatherProvider>
     </Container>
   );
