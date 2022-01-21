@@ -1,42 +1,62 @@
 import { CgSun } from "react-icons/cg";
 import { BsDroplet } from "react-icons/bs";
 import { WiStrongWind } from "react-icons/wi";
+import Skeleton from "@mui/material/Skeleton";
+import moment from "moment";
 
-import sun from "shared/assets/icons/sun.svg";
-/* import rain from "shared/assets/icons/sun-rain.svg"; */
 import { Container, Header, Content, Footer, InfoPercent } from "./styles";
+import { useContext } from "react";
+import WeatherContext from "modules/Weather/context";
 
 export default function Widget() {
+  const { loader, results } = useContext(WeatherContext);
+
+  const { name, weather, wind, main } = results;
+
   return (
     <Container>
-      <Header>
-        <label>Dubai</label>
-        <span>10:15</span>
-      </Header>
+      {loader ? (
+        <Skeleton
+          width={308}
+          height={365}
+          animation="wave"
+          variant="rectangular"
+        />
+      ) : (
+        <>
+          <Header>
+            <label>{name}</label>
+            <span>{moment().format("LT")}</span>
+          </Header>
 
-      <Content>
-        <img alt="sun" src={sun} />
-        <label>Sunny</label>
-      </Content>
+          <Content>
+            <img
+              alt="sun"
+              src={`http://openweathermap.org/img/wn/${weather[0]?.icon}@4x.png`}
+            />
+            <label>{weather[0]?.description}</label>
+          </Content>
 
-      <Footer>
-        <div>
-          <span>
-            <WiStrongWind />
-            11 km/h
-          </span>
-          <span>
-            <BsDroplet />
-            95%
-          </span>
-          <span>
-            <CgSun />
-            1.5h
-          </span>
-        </div>
+          <Footer>
+            <div>
+              <span>
+                <WiStrongWind />
+                {wind?.speed} km/h
+              </span>
+              <span>
+                <BsDroplet />
+                {main?.humidity}%
+              </span>
+              <span>
+                <CgSun />
+                23°
+              </span>
+            </div>
 
-        <InfoPercent>48°</InfoPercent>
-      </Footer>
+            <InfoPercent>23°</InfoPercent>
+          </Footer>
+        </>
+      )}
     </Container>
   );
 }

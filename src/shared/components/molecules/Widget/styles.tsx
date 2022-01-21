@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 16vw;
+  width: 308px;
 
   border: 1px solid #434343;
   background-color: #000000;
@@ -41,19 +41,17 @@ export const Content = styled.div`
   gap: 0.6rem;
   flex-direction: column;
 
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 
-  img,
-  svg {
-    height: 10rem;
+  label {
+    text-transform: capitalize;
+    font-weight: 600;
   }
 `;
 
 export const Footer = styled.div`
   display: flex;
   justify-content: space-between;
-
-  margin-top: 2rem;
 
   > div {
     display: flex;
