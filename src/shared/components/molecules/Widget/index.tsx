@@ -10,11 +10,12 @@ import Button from "shared/components/atoms/Button";
 
 import { Header, Content, Footer, Container, InfoPercent } from "./styles";
 
-export default function Widget() {
+export default function Widget({ mock }: any) {
   const { loader, results, onError, onGetWeatherSuccess } =
     useContext(WeatherContext);
 
-  const { name, weather, wind, main } = results;
+  const { name, weather, wind, main } = results || mock;
+  const isTestEnvironment = process.env.NODE_ENV === "test" && true;
 
   return (
     <>
@@ -64,7 +65,8 @@ export default function Widget() {
       </Container>
 
       <Button
-        title="Atualizar dados"
+        disabled={isTestEnvironment}
+        title="Atualizar Métricas"
         action={() =>
           window.navigator.geolocation.getCurrentPosition(
             onGetWeatherSuccess,
