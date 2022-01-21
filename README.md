@@ -50,5 +50,3 @@ $ npm test
 <p align="justify">Utilizei a proposta básica do Atomic Design como arquitetura</p>
 
 - [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
-
-<img src="https://img.shields.io/static/v1?label=react&message=framework&color=blue&style=for-the-badge&logo=REACT"/>
