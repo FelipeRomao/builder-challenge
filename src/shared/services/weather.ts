@@ -4,10 +4,10 @@ type WeatherProps = {
 };
 
 export default async function fetchWeatherData({ lat, lon }: WeatherProps) {
-  const appId = "90274f6907ae77932c3f03c5a6b76b4d";
+  const appId = process.env.REACT_APP_ID_APP;
 
   return await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=pt_br&appid=${appId}`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=pt_br&units=metric&appid=${appId}`
   )
     .then((response) => response.json())
     .then((data) => data);

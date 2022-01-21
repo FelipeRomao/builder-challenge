@@ -13,13 +13,7 @@ export const Container = styled.div`
   border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-  cursor: pointer;
-  transition: 0.5s all;
-
-  &:hover {
-    transition: 0.5s all;
-    margin-top: 2rem;
-  }
+  cursor: default;
 `;
 
 export const Header = styled.div`

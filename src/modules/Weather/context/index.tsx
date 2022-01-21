@@ -1,7 +1,7 @@
 import { useEffect, useState, ReactNode, createContext } from "react";
 import { toast } from "react-toastify";
 
-import fetchWeatherData from "shared/services/weather-api";
+import fetchWeatherData from "shared/services/weather";
 
 interface WeatherContextData {
   results: any;
@@ -16,7 +16,7 @@ const WeatherContext = createContext({} as WeatherContextData);
 
 export function WeatherProvider({ children }: WeatherProviderProps) {
   const [loader, setLoader] = useState(true);
-  const [results, setResults] = useState<any>([]);
+  const [results, setResults] = useState({});
 
   async function onGetWeatherSuccess(params: any) {
     const { coords } = params;

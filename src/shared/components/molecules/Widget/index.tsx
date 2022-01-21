@@ -49,11 +49,11 @@ export default function Widget() {
               </span>
               <span>
                 <CgSun />
-                23°
+                {main?.feels_like.toString().split(".")[0]}°
               </span>
             </div>
 
-            <InfoPercent>23°</InfoPercent>
+            <InfoPercent>{main?.temp.toString().split(".")[0]}°</InfoPercent>
           </Footer>
         </>
       )}

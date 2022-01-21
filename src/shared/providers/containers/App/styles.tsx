@@ -1,4 +1,3 @@
-import Button from "@mui/material/Button";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -12,7 +11,29 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
-export const Action = styled(Button)`
-  width: 345px;
-  background-color: #323232 !important;
+export const Action = styled.div`
+  width: 260px;
+  cursor: pointer;
+
+  background-image: linear-gradient(
+    to right,
+    #304352 0%,
+    #303030 51%,
+    #304352 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+
+  &:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
 `;
