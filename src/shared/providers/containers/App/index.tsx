@@ -17,7 +17,7 @@ function App() {
         <Widget />
 
         <Action onClick={() => window.location.reload()}>
-          Atualizar dados
+          Atualizar dadoss
         </Action>
       </WeatherProvider>
     </Container>
