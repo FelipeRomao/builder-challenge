@@ -1,19 +1,14 @@
+import { useContext } from "react";
 import { CgSun } from "react-icons/cg";
 import { BsDroplet } from "react-icons/bs";
 import { WiStrongWind } from "react-icons/wi";
 import Skeleton from "@mui/material/Skeleton";
 import moment from "moment";
 
-import {
-  Action,
-  Header,
-  Content,
-  Footer,
-  Container,
-  InfoPercent,
-} from "./styles";
-import { useContext } from "react";
 import WeatherContext from "modules/Weather/context";
+import Button from "shared/components/atoms/Button";
+
+import { Header, Content, Footer, Container, InfoPercent } from "./styles";
 
 export default function Widget() {
   const { loader, results, onError, onGetWeatherSuccess } =
@@ -68,16 +63,15 @@ export default function Widget() {
         )}
       </Container>
 
-      <Action
-        onClick={() =>
+      <Button
+        title="Atualizar dados"
+        action={() =>
           window.navigator.geolocation.getCurrentPosition(
             onGetWeatherSuccess,
             onError
           )
         }
-      >
-        Atualizar dados
-      </Action>
+      />
     </>
   );
 }
