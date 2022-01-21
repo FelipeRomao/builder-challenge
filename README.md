@@ -4,7 +4,7 @@
 
 <p align="justify">Esse app permite que você veja as condições climáticas na sua localização atual</p>
 
-### Funcionalidades disponíveis
+## Funcionalidades disponíveis
 
 - [x] Visualização do clima na região a partir da sua localização atual
 - [x] Em qualquer momento é possível atualizar a sua localização para conferir o clima da região em questão
@@ -38,7 +38,7 @@ $ npm start
 - [React Toastify](https://github.com/fkhadra/react-toastify): versão 8.1.0
 - [Material UI](https://mui.com/): versão 5.3.0
 
-## Como rodar os testes?
+## Como rodar os testes :rocket:
 
 ```bash
 # No terminal, execute o comando:
